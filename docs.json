@@ -11,5 +11,7 @@
     "light": "logo/image.png",
     "dark": "logo/image.png"
   },
-  "navigation": {}
+  "navigation": {
+    "pages": ["getting-started"]
+  }
 }
