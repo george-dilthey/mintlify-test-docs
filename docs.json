@@ -12,6 +12,15 @@
     "dark": "logo/image.png"
   },
   "navigation": {
-    "pages": ["getting-started"]
+    "groups": [
+      {
+        "group": "Getting started",
+        "pages": ["getting-started"]
+      },
+      {
+        "group": "Integrations",
+        "pages": ["integrations/snov-io"]
+      }
+    ]
   }
 }
