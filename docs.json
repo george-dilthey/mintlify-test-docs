@@ -1,12 +1,14 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Your Docs",
+  "name": "Clay Docs",
   "colors": {
-    "primary": "#ff0000"
+    "primary": "#ff7714",
+    "light": "#fcc9ab",
+    "dark": "#381005"
   },
-  "navigation": {
-    // Your navigation structure
-  }
-  // The rest of your configuration
+  "logo": {
+    "light": "/logo/image.png"
+  },
+  "navigation": []
 }
