@@ -19,7 +19,7 @@
       },
       {
         "group": "Integrations",
-        "pages": ["integrations/snov-io"]
+        "pages": ["integrations/salesloft", "integrations/snov-io"]
       }
     ]
   }

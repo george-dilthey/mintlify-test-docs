@@ -1,0 +1,194 @@
+---
+title: Salesloft integration
+description: Sales engagement platform for managing cadences, accounts, and people.
+---
+
+## Overview
+
+[Salesloft](https://salesloft.com) in Clay allows users to manage accounts and people in their Salesloft instance, look up existing records, and add people to cadences for automated outreach.
+
+## Using Salesloft in Clay
+
+1. While in a Clay table, click **Add enrichment** and search for `Salesloft`.
+2. Under **Integrations**, select one of the Salesloft options.
+
+### `Action` Lookup Account
+
+Check if an account exists in your Salesloft instance via name, domain, or custom field.
+
+**Inputs**
+
+- **Id (Optional):** The id of the account you want to lookup.
+- **Name or Domain (Optional):** Enter a name or domain that you want to use to lookup the account.
+- **Skip Domain Sanitization (Optional):** If enabled, the domain will be sent to SalesLoft exactly as entered without any sanitization or validation.
+- **Custom Fields (Optional):** Additional custom fields to search by.
+
+**Outputs**
+
+- Account ID
+- Account Name
+- Domain
+- Account details and custom fields
+
+### `Action` Lookup Person
+
+Check if a person exists in your Salesloft instance via email or custom field.
+
+**Inputs**
+
+- **Id (Optional):** The id of the person you want to lookup.
+- **Email (Optional):** The email address of the person you want to lookup.
+- **Custom Fields (Optional):** Additional custom fields to search by.
+
+**Outputs**
+
+- Person ID
+- Contact details
+- Associated account information
+
+### `Action` Create Account
+
+Create a new account in SalesLoft.
+
+**Inputs**
+
+- **Name:** Account name.
+- **Domain:** Company domain.
+- **Skip Domain Sanitization (Optional):** If enabled, the domain will be sent to SalesLoft exactly as entered.
+- **Conversational Name (Optional):** Informal name for the account.
+- **Description (Optional):** Account description.
+- **Phone (Optional):** Phone number.
+- **Website (Optional):** Company website.
+- **Professional URL (Optional):** Full LinkedIn URL.
+- **Twitter Handle (Optional):** Twitter handle with the @ in the front.
+- **Industry (Optional):** Industry classification.
+- **Company Type (Optional):** Type of company.
+- **Founded (Optional):** Date or year of founding.
+- **Revenue Range (Optional):** Estimated revenue range.
+- **Size (Optional):** Estimated number of people in employment.
+- **Tags (Optional):** Tags to apply to the account.
+- **Account Stage (Optional):** Stage in the sales process.
+- **Account Tier (Optional):** Account tier classification.
+- **Owner ID (Optional):** The ID of the user who will own this account in SalesLoft.
+- **Address Fields (Optional):** Street, City, State, Postal Code, Country.
+- **Custom Fields (Optional):** Additional custom fields.
+
+**Outputs**
+
+- Account ID
+- Created account details
+
+### `Action` Create Person
+
+Create a new person in SalesLoft.
+
+**Inputs**
+
+- **First Name:** Person's first name.
+- **Last Name:** Person's last name.
+- **Primary Email Address:** Main email address.
+- **Secondary Email Address (Optional):** Additional work email.
+- **Personal Email Address (Optional):** Personal email.
+- **Primary Phone (Optional):** Main phone number.
+- **Home Phone (Optional):** Home phone number.
+- **Mobile Phone (Optional):** Mobile phone number.
+- **Job Title (Optional):** Current job title.
+- **Job Seniority (Optional):** Level of seniority (Executive, Individual Contributor, Manager, Vice President, Unknown).
+- **Professional URL (Optional):** Full LinkedIn URL.
+- **Twitter Handle (Optional):** Twitter handle with the @ in the front.
+- **Personal Website (Optional):** Personal website URL.
+- **Tags (Optional):** Tags to apply to the person.
+- **Person Stage (Optional):** Stage in the sales process.
+- **EU Resident (Optional):** Whether this person is marked as a European Union Resident (true/false).
+- **Do Not Contact (Optional):** Whether this person is marked as "Do Not Contact" (true/false).
+- **Contact Restrictions (Optional):** Specific methods of communication to prevent (Call, Email, Message).
+- **Owner ID (Optional):** The owner ID to assign this person to.
+- **Address Fields (Optional):** City, State, Country.
+- **Company Fields (Optional):** SalesLoft Account ID, Company Name, Company Website, Company Industry, Work City, Work State, Work Country.
+- **Custom Fields (Optional):** Additional custom fields.
+
+**Outputs**
+
+- Person ID
+- Created person details
+
+### `Action` Upsert Account
+
+Update an account if the domain exists, or create a new account if it does not.
+
+**Inputs**
+
+- **Name:** Account name.
+- **Domain:** Company domain (used to match existing accounts).
+- **Skip Domain Sanitization (Optional):** If enabled, the domain will be sent to SalesLoft exactly as entered.
+- **Conversational Name (Optional):** Informal name for the account.
+- **Description (Optional):** Account description.
+- **Phone (Optional):** Phone number.
+- **Website (Optional):** Company website.
+- **Professional URL (Optional):** Full LinkedIn URL.
+- **Twitter Handle (Optional):** Twitter handle with the @ in the front.
+- **Industry (Optional):** Industry classification.
+- **Company Type (Optional):** Type of company.
+- **Founded (Optional):** Date or year of founding.
+- **Revenue Range (Optional):** Estimated revenue range.
+- **Size (Optional):** Estimated number of people in employment.
+- **Tags (Optional):** Tags to apply to the account.
+- **Account Stage (Optional):** Stage in the sales process.
+- **Account Tier (Optional):** Account tier classification.
+- **Owner ID (Optional):** The ID of the user who will own this account in SalesLoft.
+- **Address Fields (Optional):** Street, City, State, Postal Code, Country.
+- **Custom Fields (Optional):** Additional custom fields.
+
+**Outputs**
+
+- Account ID
+- Account details (created or updated)
+
+### `Action` Upsert Person
+
+Update a person if the email address exists, or create a new person if it does not.
+
+**Inputs**
+
+- **First Name:** Person's first name.
+- **Last Name:** Person's last name.
+- **Primary Email Address:** Main email address (used to match existing people).
+- **Secondary Email Address (Optional):** Additional work email.
+- **Personal Email Address (Optional):** Personal email.
+- **Primary Phone (Optional):** Main phone number.
+- **Home Phone (Optional):** Home phone number.
+- **Mobile Phone (Optional):** Mobile phone number.
+- **Job Title (Optional):** Current job title.
+- **Job Seniority (Optional):** Level of seniority (Executive, Individual Contributor, Manager, Vice President, Unknown).
+- **Professional URL (Optional):** Full LinkedIn URL.
+- **Twitter Handle (Optional):** Twitter handle with the @ in the front.
+- **Personal Website (Optional):** Personal website URL.
+- **Tags (Optional):** Tags to apply to the person.
+- **Person Stage (Optional):** Stage in the sales process.
+- **EU Resident (Optional):** Whether this person is marked as a European Union Resident (true/false).
+- **Do Not Contact (Optional):** Whether this person is marked as "Do Not Contact" (true/false).
+- **Contact Restrictions (Optional):** Specific methods of communication to prevent (Call, Email, Message).
+- **Owner ID (Optional):** The owner ID to assign this person to.
+- **Address Fields (Optional):** City, State, Country.
+- **Company Fields (Optional):** SalesLoft Account ID, Company Name, Company Website, Company Industry, Work City, Work State, Work Country.
+- **Custom Fields (Optional):** Additional custom fields.
+
+**Outputs**
+
+- Person ID
+- Person details (created or updated)
+
+### `Action` Add Person to Cadence
+
+Add a person to a cadence in SalesLoft for automated outreach sequences.
+
+**Inputs**
+
+- **Salesloft Person ID:** The SalesLoft Person you'd like to add to a cadence. This is normally taken from a Lookup Person or Upsert Person step.
+- **Cadence ID:** The Cadence you'd like to add this person to.
+- **User ID (Optional):** ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence.
+
+**Outputs**
+
+- Cadence membership ID
+- Cadence membership details
