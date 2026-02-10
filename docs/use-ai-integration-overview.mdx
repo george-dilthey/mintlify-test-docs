@@ -1,0 +1,138 @@
+---
+title: "Use AI"
+description: "Leverage AI to process, categorize, and conduct web research for actionable insights."
+---
+
+The **Use AI** feature in Clay allows users to automate tasks like content creation, data enrichment, and web research using GPT, Claude, or Gemini AI models.
+
+Here are some key capabilities of the Use AI integration:
+
+- Drafting personalized messages using company and individual data
+- Extracting financial information from 10-K reports to track business metrics
+- Researching companies' current customer lists from their websites
+
+Let's walk through how to connect and use the Use AI integration.
+
+## Enriching data with Use AI
+
+When you add Use AI to your table, you'll see two tabs: **Generate** and **Configure**.
+
+- **Generate tab**: Describe what you want in plain English, and Clay will automatically build the full column setup for you—including an enhanced prompt, recommended model, and output fields.
+- **Configure tab**: Review and adjust all technical settings, or manually configure your AI column from scratch if you prefer full control.
+
+After generating a setup, you can easily edit your original description and regenerate to refine your AI column.
+
+### Using the Generate tab (recommended)
+
+<Steps>
+<Step>
+    While in a Clay table, click `Add column` and click `Use AI`.
+</Step>
+<Step>
+    In the `Generate` tab, describe what you want to accomplish in plain English.
+    - For example: "Find the CEO's email address" or "Summarize this company's product offering from their website."
+</Step>
+<Step>
+    Click `Generate` and Clay will automatically:
+    - Create an optimized prompt
+    - Recommend the best AI model for your task
+    - Set up appropriate output fields
+</Step>
+<Step>
+    Review the generated setup in the **Configure** tab.
+</Step>
+<Step>
+    Make any adjustments if needed, then run your enrichment.
+</Step>
+</Steps>
+
+### Using the Configure tab (advanced)
+
+<Steps>
+<Step>
+    While in a Clay table, click `Add column` and click `Use AI`.
+</Step>
+<Step>
+    Switch to the `Configure` tab.
+</Step>
+<Step>
+    Select the `Use case`. Choose either web research or content creation.
+    - **Web research:** Scrape and analyze websites.
+    - **Content creation, manipulation:** Create and manipulate data in your table.
+</Step>
+<Step>
+    Select a `Model` from the dropdown.
+    - Click `Compare models` to get more detailed information about each model.
+</Step>
+<Step>
+    Write a `Prompt`.
+    - For guidance on writing effective prompts, see our doc on [writing prompts](https://www.clay.com/university/guide/ai-metaprompter-guide).
+</Step>
+<Step>
+    *(Optional – Content creation, manipulation only)* Provide context for task.
+</Step>
+<Step>
+    Add and define outputs.
+    - **Fields**
+        - In the text field, enter the field names where you want the output to appear.
+        - Use the dropdown menu to select the appropriate data type for each output field.
+    - **JSON Schema**
+</Step>
+<Step>
+    *(Optional – Content creation, manipulation only)* Click `Examples` and `Add examples` to show AI what responses should look like.
+</Step>
+</Steps>
+
+## Generating images with Use AI
+
+<Steps>
+<Step>
+    While in a Clay table, click `Add column` and click `Use AI`.
+</Step>
+<Step>
+    Select the `Use case` → `Image generation`.
+</Step>
+<Step>
+    Select a `Model` from the dropdown.
+	- Click `Compare models` to see detailed information about each model.
+</Step>
+<Step>
+    Write a `Prompt`.
+</Step>
+<Step>
+    Choose your preferred dimensions and optionally add a reference image URL.
+</Step>
+</Steps>
+
+### Run settings
+
+- **Auto-update**
+- **Only run if:** The enrichment will only run if conditions are met. ([Learn more about conditional formulas here!](https://www.clay.com/university/lesson/ai-formulas-conditional-runs-clay-101))
+
+## Selecting specific AI models
+
+Clay's Use AI feature leverages three powerful AI models: GPT, Claude, and Gemini.
+
+To learn more about each model's capabilities and prompting best practices, refer to their official documentation:
+
+<Columns cols={3}>
+<Card  title="Anthropic" icon="robot" horizontal href="https://docs.anthropic.com/en/docs/about-claude/models" />
+<Card title="OpenAI" icon="robot" horizontal href="https://platform.openai.com/docs/models" />
+<Card title="Google Gemini" icon="google" horizontal href="https://ai.google.dev/gemini-api/docs/models/gemini" />
+</Columns>
+
+### Connecting your own API keys
+
+By default, Use AI uses the Clay-managed account, though you can select other accounts during setup.
+
+While you don't need your own GPT, Claude, or Gemini API key to use the AI features, having one may reduce costs.
+
+<Steps>
+<Step>
+    Select the desired `Model` from the dropdown.
+</Step>
+<Step>
+    Click on the `Account` dropdown and click `+ Add account`.
+</Step>
+</Steps>
+

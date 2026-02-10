@@ -1,26 +1,171 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Clay Docs",
+  "theme": "almond",
+  "name": "Clay Documentation",
   "colors": {
-    "primary": "#ff7714",
-    "light": "#fcc9ab",
-    "dark": "#381005"
+    "primary": "#0053b5",
+    "light": "#cc0687",
+    "dark": "#000000"
   },
-  "logo": {
-    "light": "logo/image.png",
-    "dark": "logo/image.png"
+  "favicon": "/favicon.png",
+  "appearance": {
+    "default": "dark"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Roobert",
+      "source": "https://mintlify-assets.b-cdn.net/fonts/Roobert-SemiBold.woff2",
+      "format": "woff2"
+    },
+    "body": {
+      "family": "Roobert",
+      "source": "https://mintlify-assets.b-cdn.net/fonts/Roobert-Regular.woff2",
+      "format": "woff2"
+    }
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
   },
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "Getting started",
-        "pages": ["getting-started"]
-      },
-      {
-        "group": "Integrations",
-        "pages": ["integrations/salesloft", "integrations/snov-io"]
+        "tab": "Docs",
+        "pages": [
+          {
+            "group": "Docs",
+            "pages": [
+              "index",
+              {
+                "group": "Getting started",
+                "icon": "/icons/dot-getting-started.svg",
+                "pages": [
+                  "docs-topics/getting-started",
+                  "docs/signals",
+                  "docs/zeliq-integration"
+                ]
+              },
+              {
+                "group": "Find",
+                "icon": "/icons/dot-find.svg",
+                "pages": [
+                  "docs-topics/find",
+                  "docs/webhooks"
+                ]
+              },
+              {
+                "group": "Enrich",
+                "icon": "/icons/dot-enrich.svg",
+                "pages": [
+                  "docs-topics/enrich"
+                ]
+              },
+              {
+                "group": "Transform",
+                "icon": "/icons/dot-transform.svg",
+                "pages": [
+                  "docs-topics/transform"
+                ]
+              },
+              {
+                "group": "Web scraping",
+                "icon": "/icons/dot-web-scraping.svg",
+                "pages": [
+                  "docs-topics/web-scraping"
+                ]
+              },
+              {
+                "group": "Gen AI",
+                "icon": "/icons/dot-gen-ai.svg",
+                "pages": [
+                  "docs-topics/gen-ai",
+                  "docs/use-ai-integration-overview",
+                  "docs/sculptor",
+                  "docs/claygent-builder"
+                ]
+              },
+              {
+                "group": "Export",
+                "icon": "/icons/dot-export.svg",
+                "pages": [
+                  "docs-topics/export"
+                ]
+              },
+              {
+                "group": "Settings & admin",
+                "icon": "/icons/dot-settings.svg",
+                "pages": [
+                  "docs-topics/settings"
+                ]
+              },
+              {
+                "group": "Signals & triggers",
+                "icon": "/icons/dot-signals.svg",
+                "pages": [
+                  "docs-topics/signals",
+                  "docs/website-tracking"
+                ]
+              }
+            ]
+          }
+        ]
       }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "About",
+          "href": "https://www.clay.com/about",
+          "icon": "users"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://www.clay.com/blog/gtm-engineering",
+          "icon": "newspaper"
+        },
+        {
+          "anchor": "Status",
+          "href": "https://status.clay.com/",
+          "icon": "signal"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png",
+    "href": "https://www.clay.com"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Sign up",
+        "href": "https://app.clay.com/signup?source=nav"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get a demo",
+      "href": "https://www.clay.com/demo"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
     ]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/clay",
+      "linkedin": "https://www.linkedin.com/company/grow-with-clay/posts/?feedView=all",
+      "slack": "https://www.clay.com/slack-community",
+      "youtube": "https://www.youtube.com/@GrowWithClay"
+    }
   }
 }

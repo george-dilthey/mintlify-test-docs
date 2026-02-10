@@ -1,0 +1,106 @@
+---
+title: "Web intent"
+description: "Collect visitor information including pages visited, time spent, and traffic sources."
+---
+
+Clay’s website tracking enables teams to collect visitor information in order to understand web intent — including pages visited, time spent, and traffic sources.
+
+This tracking provides insights into how visitors engage with your content and helps you identify high-intent accounts at the optimal moment.
+
+## Using website tracking in Clay
+
+### Creating the connection
+
+<Steps>
+<Step>
+    Click on your account name → `Settings` → `Web intent`.
+</Step>
+<Step>
+    Click `Add connection` and give the connection a unique name – you'll need this later.
+</Step>
+<Step>
+    Copy the code under `Install tracking snippet` and install with one of the following methods:
+    
+    **Directly installing a tracking snippet (Recommended):**
+    - We recommend installing the tracking snippet before the closing `</body>` tag on **all pages** of your website to collect comprehensive data. This snippet loads tracking scripts asynchronously, ensuring it won't affect your page loading time.
+    
+    **Installing via** [**Google Tag Manager**](https://support.google.com/tagmanager/answer/6107167#CustomHTML)**:**
+    - *Note: While this method works, we recommend installing directly as ad blockers often disable Tag Manager.*
+    1. Navigate to the `Tags` section in your GTM account.
+    2. Click `New` in the top-left to create a new tag.
+    3. Add a name like `Clay Visitor Tracking`.
+    4. Edit your `Tag Configuration`, and select `Custom HTML` as the tag type.
+    5. Paste the JavaScript snippet from Clay into the text box.
+    6. Below, add a new trigger, and select `All Pages`.
+    7. Finally, click `Save` for this new tag, and publish your changes.
+    
+    **Installing via** [**Twilio Segment**](https://segment.com/docs/connections/destinations/catalog/actions-clay/)**:**
+    1. Visit [this link](https://app.segment.com/goto-my-workspace/destinations/catalog/actions-clay) to add the Clay integration as a new destination in Segment.
+    2. Select the website data source in Segment you want to connect to Clay.
+    3. From your Clay website connection page, copy both your `Connection key` and `Secret key` to the Segment settings page.
+    4. Enable your Clay destination to begin sending events.
+</Step>
+<Step>
+    Configure which de-anonymization providers you'd like to use. Clay provides a recommended selection or you can manually choose your own provider settings.
+    
+    <Note>
+    Pricing is based on unique IP addresses that successfully retrieve data. You'll be charged at most once per 30-day period for each visitor with the same IP address who visits your website.
+    </Note>
+</Step>
+<Step>
+    Add filters for specific countries or pages.
+    - You can include a `*` to match any page paths (e.g., `/blog*`).
+</Step>
+<Step>
+    Make sure `Connection enabled` is toggled and click `Save`.
+</Step>
+<Step>
+    In a workbook, under `Create`, click `Web intent`.
+</Step>
+<Step>
+    Select your website connection from the dropdown and adjust your filters.
+    - Configure your table filters using page paths, session time, referrer, or UTM tags to show only relevant visitor data.
+    - For advanced filtering, create filter groups and adjust visit frequency parameters to refine results.
+</Step>
+</Steps>
+
+Website visitor data appears in your table grouped by company domain. Since we only display completed visitor sessions, data may be delayed up to 30 minutes after user activity.
+
+## FAQ
+
+### Is visitor tracking data shown in real-time?
+
+No, visitor event data can be delayed up to 30 minutes. This allows the full visitor session to be completed first.
+
+### When will I start getting charged?
+
+Charges begin after you install the tracking snippet and Clay starts receiving events. To stop tracking, disable the website connection under your workspace settings. Clay will stop processing new visitor sessions and stop charging Clay credits.
+
+### How does pricing work?
+
+Users are only charged for successful IP enrichments, with each result cached for 30 days to avoid repeat costs. On average, this works out to around $0.008 per IP enriched.
+
+You can view your credit spend for signals underneath the `Signals` tab of the [credit usage dashboard](https://www.clay.com/university/guide/credit-usage). To access, click on your account name → `Settings` → `Credit usage`.
+
+### How can I reduce credit usage?
+
+To minimize credit usage while maintaining quality results, adjust your **advanced filters** to focus on higher-intent traffic.
+
+**Recommended settings:**
+
+- **Minimum session duration:** 20–30 seconds
+- **Minimum unique pages visited:** 2
+
+These filters help narrow your results to visitors who spend more time on site and engage with multiple pages, indicating genuine interest.
+
+### **Can I track person-level information?**
+
+Clay's visitor tracking identifies unique accounts visiting your website, not individuals. Once an account is identified, you can use enrichments to find specific profiles of relevant people you may want to target at those companies.
+
+### How many site visitors can Clay support?
+
+Clay can support hundreds of thousands of daily visitors for even the largest enterprise customers.
+
+### Is the visitor data consistent across different providers?
+
+Yes, de-anonymized website data is in a consistent format across various providers.

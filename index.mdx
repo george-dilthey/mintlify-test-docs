@@ -1,97 +1,257 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Clay University"
+sidebarTitle: "Home"
+mode: "frame"
 ---
 
-## Setting up
+import { SearchBar } from "/snippets/search-bar.jsx";
+import { CustomCard } from "/snippets/card.jsx";
+import { TopicCard } from "/snippets/topic-card.jsx";
 
-Get your documentation site up and running in minutes.
+{/* Outer container with padding */}
+<div className="px-4 pt-4">
+    {/* Hero section */}
+    <div className="bg-[#005870] text-white rounded-2xl overflow-hidden">
+        {/* Inner content with border lines */}
+        <div className="flex min-h-[50vh] sm:min-h-[45vh]">
+            {/* Left spacer */}
+            <div className="w-6 lg:w-12 shrink-0" />
+            
+            {/* Main content area with vertical borders */}
+            <div className="flex-1 border-l border-r border-white/30 flex flex-col">
+                {/* Top border line */}
+                <div className="h-6 lg:h-10 border-b border-white/30" />
+                
+                {/* Title */}
+                <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold p-4 sm:p-6 md:p-8 border-b border-white/30'>
+                Hello, how can we help?
+                </h1>
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+                {/* Description */}
+                <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:w-1/2 w-full p-4 sm:p-6 md:p-8 flex-1'>
+                Find answers to detailed, technical questions across 100+ integrations.
+                </p>
+                
+                {/* Bottom border line + extra space for search bar overlap */}
+                <div className="h-12 lg:h-16 border-t border-white/30" />
+            </div>
+            
+            {/* Right spacer */}
+            <div className="w-6 lg:w-12 shrink-0" />
+        </div>
+    </div>
+</div>
 
-## Make it yours
+{/* Search bar section - overlaps hero with negative margin */}
+<div className="-mt-6 px-8 lg:px-16">
+    <SearchBar placeholder="Shape your question here" />
 
-Design a docs site that looks great and empowers your users.
+    <div className="w-full flex flex-wrap gap-2 sm:gap-3 justify-start sm:pt-4 pt-2">
+        <a
+            href="https://university.clay.com/docs-topics/signals"
+            className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-white text-xs sm:text-sm text-black border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 whitespace-nowrap"
+        >
+            Signals & triggers
+        </a>
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
-  </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
+        <a
+            href="https://university.clay.com/docs-topics/getting-started"
+            className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-white text-xs sm:text-sm text-black border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 whitespace-nowrap"
+        >
+            Getting started
+        </a>
 
-## Create beautiful pages
+        <a
+            href="https://university.clay.com/docs-topics/enrich"
+            className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-white text-xs sm:text-sm text-black border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 whitespace-nowrap"
+        >
+            Enrich
+        </a>
 
-Everything you need to create world-class documentation.
+        <a
+            href="https://university.clay.com/docs-topics/web-scraping"
+            className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-white text-xs sm:text-sm text-black border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 whitespace-nowrap"
+        >
+            Web scraping
+        </a>
+    </div>
+</div>
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+<div className="lg:px-16 px-8 mt-12">
+    <h1 className="text-2xl font-bold mb-6 dark:text-white text-black">News & launches</h1>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <CustomCard
+            category="Gen AI"
+            title="Sculptor"
+            description="Your go-to-market co-pilot"
+            ctaText="View article"
+            ctaLink="/docs/sculptor"
+            ctaVariant="button"
+            bgColor="#f9f8f6"
+            darkBgColor="#000000"
+            textColor="#000000"
+            darkTextColor="#ffffff"
+        />
+        <CustomCard
+            category="Getting started"
+            title="Use Signals in Clay"
+            description="Learn about Signals, a way to monitor changes to your contacts like promotions, job changes, or..."
+            ctaText="View article"
+            ctaLink="/docs/signals"
+            ctaVariant="button"
+            bgColor="#f9f8f6"
+            darkBgColor="#000000"
+            textColor="#000000"
+            darkTextColor="#ffffff"
+        />
+        <CustomCard
+            category="Signals & triggers"
+            title="Web intent"
+            description="Collect visitor information including pages visited, time spent, and traffic sources."
+            ctaText="View article"
+            ctaLink="/docs/website-tracking"
+            ctaVariant="button"
+            bgColor="#f9f8f6"
+            darkBgColor="#000000"
+            textColor="#000000"
+            darkTextColor="#ffffff"
+        />
+    </div>
+</div>
 
-## Need inspiration?
+<div className="lg:px-16 px-8 mt-12">
+    <h1 className="text-2xl font-bold mb-6 dark:text-white text-black">Explore popular topics</h1>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-10">
+        <TopicCard
+            title="Signals & triggers"
+            description="Automate actions using real-time signals to react instantly and intelligently."
+            href="/docs-topics/signals"
+            image="https://cdn.prod.website-files.com/687e604972375496b891fe58/691d48a8da1684e2fdc760d1_Signals%20and%20Triggers.png"
+            imageAlt="Signals and Triggers"
+            iconUrl="https://mintlify.b-cdn.net/v6.5.1/solid/signal.svg"
+        />
+        <TopicCard
+            title="Settings & admin"
+            description="Manage workspace controls, permissions, billing, and user access securely."
+            href="/docs-topics/settings"
+            image="https://cdn.prod.website-files.com/687e604972375496b891fe58/691d497cc5bd570498c9e398_Settings%20%26%20Admin.png"
+            imageAlt="Settings and Admin"
+            iconUrl="https://mintlify.b-cdn.net/v6.5.1/solid/gear.svg"
+        />
+        <TopicCard
+            title="Export"
+            description="Send data anywhere: spreadsheets, CRM, Slack, or custom workflows."
+            href="/docs-topics/export"
+            image="https://cdn.prod.website-files.com/687e604972375496b891fe58/691d49763ca9ff1c0ba905b1_Export.png"
+            imageAlt="Export"
+            iconUrl="https://mintlify.b-cdn.net/v6.5.1/solid/arrow-up-right-from-square.svg"
+        />
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+        <TopicCard
+            title="Gen AI"
+            description="Generate content, insights, and automation using powerful AI capabilities."
+            href="/docs-topics/gen-ai"
+            image="	https://cdn.prod.website-files.com/687e604972375496b891fe58/691d488c1ef6284c16bc3d2f_Gen%20AI.png"
+            imageAlt="Gen AI"
+            iconUrl="https://mintlify.b-cdn.net/v6.5.1/solid/wand-magic-sparkles.svg"
+        />
+        <TopicCard
+            title="Web scraping"
+            description="Extract structured data from any website, instantly and code-free."
+            href="/docs-topics/web-scraping"
+            image="https://cdn.prod.website-files.com/687e604972375496b891fe58/691d4880687a791c5f7c2098_Web%20Scraping.png"
+            imageAlt="Web Scraping"
+            iconUrl="https://mintlify.b-cdn.net/v6.5.1/solid/globe.svg"
+        />
+        <TopicCard
+            title="Transform"
+            description="Clean, format, and restructure data to fit your workflow perfectly."
+            href="/docs-topics/transform"
+            image="https://cdn.prod.website-files.com/687e604972375496b891fe58/691d4969f7b23bd49856e6e1_Transform.png"
+            imageAlt="Transform"
+            iconUrl="https://mintlify.b-cdn.net/v6.5.1/solid/arrows-rotate.svg"
+        />
+
+        <TopicCard
+            title="Enrich"
+            description="Add missing details using powerful enrichment sources and integrations."
+            href="/docs-topics/enrich"
+            image="https://cdn.prod.website-files.com/687e604972375496b891fe58/691d4878dbabe72eb0ae67cd_Enrichment.png"
+            imageAlt="Enrich"
+            iconUrl="https://mintlify.b-cdn.net/v6.5.1/solid/database.svg"
+        />
+        <TopicCard
+            title="Find"
+            description="Search and filter data effortlessly across platforms and systems."
+            href="/docs-topics/find"
+            image="https://cdn.prod.website-files.com/687e604972375496b891fe58/691d485e6b742a2b22727d53_Find.png"
+            imageAlt="Find"
+            iconUrl="https://mintlify.b-cdn.net/v6.5.1/solid/magnifying-glass.svg"
+        />
+        <TopicCard
+            title="https://university.clay.com/docs-topics/getting-started"
+            description="Learn the basics and build your first workflow step-by-step."
+            href="/docs-topics/getting-started"
+            image="https://cdn.prod.website-files.com/687e604972375496b891fe58/691d483d21aa15e276c57106_Getting%20Started.png"
+            imageAlt="Getting Started"
+            iconUrl="https://mintlify.b-cdn.net/v6.5.1/solid/play.svg"
+        />
+    </div>
+</div>
+
+<div className="lg:px-16 px-8 mt-20">
+    <h1 className="text-2xl font-bold mb-6 dark:text-white text-black">Other popular resources</h1>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <CustomCard
+            subtitle="Experts"
+            title="Find a Clay Expert"
+            description="Explore our network of Clay experts and agencies."
+            ctaText="View experts"
+            ctaLink="https://www.clay.com/experts"
+            bgColor="#078a52"
+            darkBgColor="#078a52"
+            darkInnerBgColor="#1a1a1a"
+            textColor="#000000"
+            darkTextColor="#ffffff"
+        />
+        <CustomCard
+            subtitle="Community"
+            title="Join our slack community"
+            description="Find help in our slack community, and support channels."
+            ctaText="Go to slack"
+            ctaLink="https://community.clay.com/"
+            bgColor="#fdad15"
+            darkBgColor="#fdad15"
+            darkInnerBgColor="#1a1a1a"
+            textColor="#000000"
+            darkTextColor="#ffffff"
+        />
+        <CustomCard
+            subtitle="Cohorts"
+            title="Join a cohort, learn Clay fast!"
+            description="The faster way to master Clay. Sign in if you're enrolled in a cohort (current or past) or apply!"
+            ctaText="Learn more about cohorts"
+            ctaLink="https://university.clay.com/cohorts"
+            bgColor="#0667d9"
+            darkBgColor="#0667d9"
+            darkInnerBgColor="#1a1a1a"
+            textColor="#000000"
+            darkTextColor="#ffffff"
+        />
+        <CustomCard
+            subtitle="Talents"
+            title="Hire GTME Talent"
+            description="Find and connect with GTM talent who've demonstrated expertise in building advanced workflows"
+            ctaText="Explore GTME talents"
+            ctaLink="https://www.clay.com/talent"
+            bgColor="#cc0687"
+            darkBgColor="#cc0687"
+            darkInnerBgColor="#1a1a1a"
+            textColor="#000000"
+            darkTextColor="#ffffff"
+        />
+    </div>
+</div>

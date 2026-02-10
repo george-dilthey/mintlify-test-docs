@@ -1,0 +1,27 @@
+/* #navbar {
+    background-color: #000000 !important;
+}
+
+#sidebar-content {
+    background-color: #000000 !important;
+} */
+
+.dark #content-container {
+    background-color: #1a1a1a !important;
+}
+
+#almond-background-color {
+    background-color: #f9f8f6 !important;
+}
+
+.dark #almond-background-color {
+    background-color: #000000 !important;
+}
+
+h5 {
+    font-weight: 600 !important;
+}
+
+.accordion {
+    background-color: transparent !important;
+}
